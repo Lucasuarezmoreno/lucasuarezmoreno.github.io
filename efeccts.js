@@ -27,7 +27,7 @@ const typed2 = new Typed('.yo', {
 });
 
 const typed3 = new Typed('.conocerme', {
-    strings: ['Soy un joven apasionado por la programación, la cocina y el gafé. La disciplina, responsabilidad y compromiso son tres factores que me definen. Me gusta dar siempre lo mejor de mí en todo, por más simple o compleja que pueda ser la tarea.'],
+    strings: ['Soy un joven apasionado por la programación, la cocina y el café. La disciplina, responsabilidad y compromiso son tres factores que me definen. Me gusta dar siempre lo mejor de mí en todo, por más simple o compleja que pueda ser la tarea.'],
     typeSpeed:20,
     starDelay:300,
     backSpeed:75,
