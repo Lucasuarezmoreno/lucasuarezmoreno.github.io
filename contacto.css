@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: rexlia;
+    background: #251d46;
+    padding: 1.5em;
+}
+
+@font-face{
+    font-family: rexlia;
+    src:url(Square.ttf)
+}
+
+.logo{
+    text-align: center;
+    color: #00F99F;
+    font-size: 55px;
+}
+
+.contact-form h3{
+    color:#faed7b;
+}
+
+.contact-form p{
+    color:#99b5e5;
+}
+
+.contact-info{
+    color:#99b5e5;
+    background: #140d30;
+}
+
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 rgba(167, 98, 194, 0.3);
+}
+
+.contact-wrapper > *{
+    padding: 1em;
+}
+
+.contact-form{
+    background: #2c1d68;
+}
+
+.contact-form form p{
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    color: aquamarine;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid violet;
+}
+
+.contact-form form button{
+    
+    font-size: 25px;
+    color: aquamarine;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    position: relative;
+    border: 2px solid #b684fd;
+    outline: 1px solid;
+    outline-color: rgba(163, 100, 247, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.contact-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form .block{
+    grid-column: 1 / 3;
+}
+
+.contact-form form button:hover, 
+.contact-form form button:focus{
+    color: #b684fd;
+    border: 2px solid aquamarine;
+    text-decoration: none;
+    box-shadow: inset 0 0 20px rgba(115, 249, 253, 0.5), 0 0 20px rgba(144, 85, 255, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+}
+
+.contact-info h4, 
+.contact-info ul, 
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contact-info ul{
+    list-style: none;
+    font-family: rexlia;
+    padding: 0;
+}
+
+.contact-info ul li{
+    padding: .3em;
+}
+
+@media (min-width: 700px){
+    body{
+        padding: 0 4rem;
+    }
+
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > *{
+        padding: 2em;
+
+    }
+
+    .contact-info h4, 
+    .contact-info ul, 
+    .contact-info p{
+        padding: 1em;
+        text-align: left;
+    }
+}
+
+

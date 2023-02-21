@@ -1,0 +1,131 @@
+:root {
+  --bgColor: #ffe8d5;
+  --animDuration: 6s;
+  --animDuration2: 4s;
+  --animDuration3: 2s;
+  --containerSize: 330px;
+  --imgSize: 80px;
+  --pathColor: #7d008d;
+}
+
+  body {
+    background-color: var(--bgColor);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container2 {
+    position: absolute;
+    width: var(--containerSize);
+    height: var(--containerSize);
+    border-radius: 50%;
+    z-index: 100;
+    transform: rotate(0deg);
+    animation: rotateParent var(--animDuration) infinite linear forwards;
+  }
+  .container3{
+    position: absolute;
+    width: var(--containerSize);
+    height: var(--containerSize);
+    border-radius: 50%;
+    z-index: 100;
+    transform: rotate(0deg);
+    animation: rotateParent var(--animDuration2) infinite linear forwards;
+  }
+  .container4 {
+    position: absolute;
+    width: var(--containerSize);
+    height: var(--containerSize);
+    border: 5px solid var(--pathColor); /* À commenter pour masquer la trajectoire - Comment for hiding path */
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation: rotateParent var(--animDuration3) infinite linear forwards;
+  }
+
+  .container5 {
+    position: absolute;
+    width: var(--containerSize);
+    height: var(--containerSize);
+    border-radius: 50%;
+  }
+
+  .container5 img{    
+    height: 260px;
+    width: 250px;
+    margin-left: 40px;
+    margin-top: 25px;
+  }
+  
+  .child {
+    position: absolute;
+    width: var(--imgSize);
+    height: var(--imgSize);
+    top: calc(var(--imgSize) / 2 * -1);
+    left: calc(var(--containerSize) / 2 - calc(var(--imgSize) / 2));
+    animation: rotateChild var(--animDuration) infinite linear forwards;
+  }
+  
+  .java{
+      position: absolute;
+      width: var(--imgSize);
+      height: var(--imgSize);
+      top: calc(var(--imgSize) / 2 * -1);
+      left: calc(var(--containerSize) / 2 - calc(var(--imgSize) / 2));
+    border-radius: 35px;
+    z-index: 100;
+    animation:  rotatejava var(--animDuration) infinite linear forwards;
+  }
+  
+  
+  @keyframes rotatejava {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .html{
+    position: absolute;
+    z-index: 100;
+    width: var(--imgSize);
+      height: var(--imgSize);
+      top: calc(var(--imgSize) / 2 * -1);
+      left: calc(var(--containerSize) / 2 - calc(var(--imgSize) / 2));
+    animation:  rotatehtml var(--animDuration) infinite linear forwards;
+}
+
+
+@keyframes rotatehtml {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.css{
+    position: absolute;
+    z-index: 100;
+    width: var(--imgSize);
+    height: var(--imgSize);
+    top: calc(var(--imgSize) / 2 * -1);
+    left: calc(var(--containerSize) / 2 - calc(var(--imgSize) / 2));
+    animation-delay: 1.4s;
+    animation:  rotatecss var(--animDuration) infinite linear forwards;
+}
+
+@keyframes rotateParent {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@keyframes rotatecss {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+

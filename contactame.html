@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8283529e2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contacto.css">
+    <title>Contactame</title>
+</head>
+<body>
+    <div class="content">
+        <h1 class="logo">Contacto</h1>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3>Contactame</h3>
+                <form action="enviar.php">
+                    <p>
+                        <label>Nombre completo.</label>
+                        <input type="text" name="nombre_completo" required>
+                    </p>
+                    <p>
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </p>
+                    <p class="block">
+                        <label>Mensaje</label>
+                        <textarea name="mensaje"  rows="3" required></textarea>
+                    </p>
+                    <p class="block">
+                        <button type="submit" value="Enviar" id="boton">Enviar</button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Mi informacion.</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>Argentina, Buenos Aires, Avellaneda</li>
+                    <li><i class="fas fa-phone"></i>+54 11 2365-5523</li>
+                    <li><i class="fas fa-envelope-open-text"></i>suarezluca218@gmail.com</li>
+              </ul>
+              <p>
+                Si estás interesado en mi forma de trabajar comunicate conmigo.
+              </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
