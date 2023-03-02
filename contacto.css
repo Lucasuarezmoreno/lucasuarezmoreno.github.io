@@ -49,6 +49,10 @@ body{
     padding: 1em;
 }
 
+form button{
+    cursor: pointer;
+}
+
 .contact-form form button,
 .contact-form form input,
 .contact-form form textarea{
@@ -86,6 +90,19 @@ body{
     grid-column: 1 / 3;
 }
 
+.text{
+    transform: translateY(-50%);
+}
+
+.checkmark {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+
 .contact-form form button:hover, 
 .contact-form form button:focus{
     color: #b684fd;
@@ -113,6 +130,7 @@ body{
 .contact-info ul li{
     padding: .3em;
 }
+
 
 @media (min-width: 700px){
     body{
