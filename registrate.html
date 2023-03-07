@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registrarse</title>
+	<script src="https://kit.fontawesome.com/8283529e2a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+
+	*{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+
+    body{
+		font-family: Arial, Helvetica, sans-serif;
+		width: 100%;
+        height: 600px;
+        background: #2980B9;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6bd4fa91, #287fb8a2), url(https://lh3.googleusercontent.com/p/AF1QipO6ulH10Fs6GZMDwrUYWSIKnQx3TRemhiMvALLW=s1600-h380);
+        /* Chrome 10-25, Safari 5.1-6 */
+         background: linear-gradient(to right, #FFFFFF, hsla(196, 93%, 70%, 0.568), hsla(204, 64%, 44%, 0.635)), url(https://lh3.googleusercontent.com/p/AF1QipO6ulH10Fs6GZMDwrUYWSIKnQx3TRemhiMvALLW=s1600-h380);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+	}
+
+   .contenedor{
+		width: 100%;
+		padding: 15px;
+		display: grid;
+	}
+
+	.formulario{
+		background: #24303c;
+        width: 500px;
+		margin-top: 15px;
+		padding: 30px;
+        margin: auto;
+		border-radius: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+	}
+
+	h1{
+		text-align: center;
+		color: #ffffff;
+		font-size: 40px;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+        font-size: 20px;
+        border:none;
+		width: 86.2%;
+        background: #24303c;
+        border-radius: 5px;
+		padding: 10px;
+        color: white;
+		outline: none;
+        font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.input-contenedor{
+		margin-bottom: 16px;
+        border-radius: 5px;
+        border: none;
+		border: 1px solid #1f53c5;
+	}
+
+	.icon{
+		min-width: 50px;
+		text-align: center;
+		color: #999;
+	}
+
+	.icono{
+		min-width: 50px;
+		text-align: center;
+	}
+
+	.button{
+		border: none;
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		color: white;
+		font-size:20px;
+		background: #2f6ed3;
+		padding: 15px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.button:hover{
+		background: cadetblue;
+	}
+
+	p{
+		text-align: center;
+        line-height: 25px;
+	}
+
+	.link{
+		text-decoration: none;
+		color: #2f6ed3;
+		font-weight: 600;
+	}
+
+	.link:hover{
+		color: cadetblue;
+		text-decoration: underline;
+	}
+
+	@media(min-width:768px){
+		.formulario{
+			margin: auto;
+			width: 500px;
+			margin-top: 15px;
+			border-radius: 5%;
+            background: #24303c;
+		    padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+		}
+	}
+
+	.formulario__input-contenedor{
+		position: relative;
+	}
+
+	.formulario__input-error{
+		font-size: 12px;
+		margin-bottom: 0px;
+		display: none;
+	}
+
+	.formulario__input-error-activo{
+		display: block;
+	}
+
+	.formulario__validacion-estado{
+		position: absolute;
+		right: 10px;
+		bottom: 15px;
+		z-index: 100;
+		font-size: 16px;
+		opacity: 0;
+	}
+
+	.formulario__mensaje
+	.input-contenedor-btn-enviar{
+		grid-column: span 2;
+	}
+
+	.formulario__mensaje{
+		height: 45px;
+		line-height: 45px;
+		background: #f66060;
+		padding: 10px;
+		display:none;
+		border-radius: 5px;
+	}
+
+	.formulario__mensaje-activo{
+		display: block;
+	}
+
+	.formulario__mensaje p{
+		color: black;
+		margin: 0px;
+	}
+
+	.input-contenedor-btn-enviar{
+		display: flex;
+		background: green;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.formulario__mensaje-exito{
+		font-size: 14px;
+		color:white;
+		display: none;
+	}
+
+	.formulario__mensaje-exito-activo{
+		display: block;
+	}
+
+	/*estilos para validacion*/
+
+	.input-contenedor-correcto 
+	.formulario__validacion-estado{
+        color: #1ed12d;
+		opacity: 1;
+	}
+
+	.input-contenedor-incorrecto .formulario__validacion-estado{
+		color: #bb2929;
+		opacity: 1;
+	}
+
+	/*mediaqueris*/
+
+
+
+	
+
+</style>
+<script lenguaje="javascript" type="text/javascript">
+        
+</script>
+<body>
+	<header>
+    <form class="formulario" id="formulario">
+	    <h1>Registrate</h1>
+		<div class="contenedor">
+			<div class="input-contenedor" id="grupo__nombre">
+				<i class="fa-solid fa-user icon"></i>
+				<input type="text" placeholder="Ingrese su Nombre" class="nombre">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">Solo se permite letras y espacios.</p>
+				</div>
+			</div>
+			<div  class="input-contenedor" id="grupo__apellido">
+				<i class="fa-solid fa-user icon"></i>
+				<input type="text" placeholder="Ingrese su Apellido" class="apellido">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">Solo se permite letras y espacios.</p>
+				</div>
+			</div>
+			<div  class="input-contenedor" id="grupo__correo">
+				<i class="fa-solid fa-envelope icon"></i>
+				<input type="email" placeholder="Ingrese su Correo Electronico" class="correo">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+				</div>
+			</div>
+			<div  class="input-contenedor" id="grupo__validacion-correo">
+				<i class="fa-solid fa-envelope icon"></i>
+				<input type="email" placeholder="Confirmar Correo Electronico" class="correo">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">Ambos correos electronicos deben ser iguales.</p>
+				</div>
+			</div>
+			<div  class="input-contenedor" id="grupo__contraseña">
+				<i class="fa-solid fa-key icon"></i>
+				<input type="password" placeholder="Ingrese su Contraseña" class="pass">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos.</p>
+				</div>
+			</div>
+			<div  class="input-contenedor" id="grupo__validacion-contraseña">
+				<i class="fa-solid fa-key icon"></i>
+				<input type="password" placeholder="Confirmar Contraseña" class="repass">
+				<div class="formulario__input-contenedor">
+					<i class="formulario__validacion-estado fa-regular fa-circle-xmark icono"></i>
+					<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+				</div>
+			</div>
+			<div>
+			    <p>Al registrarte, aceptas nuestras Condiciones de uso y Politicas de privacidad</p>
+			    <p>¿ya tienes cuenta? <a class="link" href="loginvista.html">Iniciar Sesion</a></p>
+			</div>
+		</div>
+		<div class="formulario__mensaje" id="formulario__mensaje">
+			<p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+		</div>
+		<div class="input-contenedor input-contenedor-btn-enviar" >
+			<input type="submit" value="Registrate" class="button">
+			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente.</p>
+		</div>
+    </form>
+	</header>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gameboy.css">
+    <link rel="stylesheet" href="snake.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="colored_component">
+
+        <div id="screen_border">
+      
+          <div id="screen"></div>
+          <div id="gameboy_color"> <span style="font-family:arial black">GAMEBOY</span> <span style="font-family:comic sans ms"> <span style="color:pink">C</span><span style="color:
+          violet">O</span><span style="color:yellow">L</span><span style="color:orange">O</span><span style="color:blue">R</span></div>
+      
+          <div id="power_text">POWER</div>
+      
+          <div class="power-moon"></div>
+          <div class="power-moon"></div>
+          <div class="power-moon"></div>
+        </div>
+      
+      
+        <div id="cross_button">
+      
+          <div id="vertical">
+            <div id="up"></div>
+            <div id="down"></div>
+          </div>
+          <div id="horizontal">
+            <div id="middle_round"></div>
+            <div id="left"></div>
+            <div id="right"></div>
+          </div>
+        </div>
+      
+        <div id="A_button">
+          <div class="btn-txt">A</div>
+        </div>
+        <div id="B_button">
+          <div class="btn-txt">B</div>
+        </div>
+        <div id="select_button">
+          <div class="lower-btn-txt">SELECT</div>
+        </div>
+        <div id="start_button">
+          <div class="lower-btn-txt">START</div>
+        </div>
+      
+        <div id="1st_row" class="row">
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+        </div>
+        <div id="2nd_row" class="row">
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+        </div>
+        <div id="3nd_row" class="row">
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+        </div>
+      
+        <div id="4th_row" class="row">
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+          <div class="sound-holes"></div>
+        </div>
+      
+        <div id="on_offdiv">
+          <input type="checkbox" id="buttonon_off">
+          <label for="buttonon_off" id="on_off"></label>
+          <div id="power_light"></div>
+          <div id="screen_on"><div id="titulo"></div>
+          <div id="bannerRotarTelefono" class="esconder">
+            <button id="botonCerrarBanner">OK</button>
+          </div>
+          <div id="contenedorJuego">
+            <div id="contenedorNintendo">
+              <div id="puntos">PUNTOS: 0</div>
+              <div id="juegoOverlay">
+                <canvas id="juegoCanvas" width="600" height="600"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+          
+        </div>
+          
+          <div id="hey"> <- </div>
+      
+      </div>
+      <script src="snake.js"></script>
+</body>
+</html>
