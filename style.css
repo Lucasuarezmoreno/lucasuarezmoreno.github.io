@@ -266,8 +266,6 @@ button:hover{
     top: 4px;
     border-radius: 4px;
     height: 100%;
-  /*transform: rotateY(180deg);
-  animation: animateUser 4s linear infinite;*/
 }
 
 @-webkit-keyframes rotate {
@@ -309,23 +307,7 @@ button:hover{
 } 
 
 
-/*.imgbox #splash{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) rotate(-35deg);
-    width: 160%;
-    filter: saturate(200%);
-    animation: animateUser 4s linear infinite;
-}
 
-@keyframes animate{
-    50%{
-        top: 49%;
-        left: 51%;
-        width: 155%;
-    }
-}*/
 
 .Habilidades{
     display: flex;
@@ -1339,6 +1321,85 @@ nav ul li{
   content: counter(percentage) '%';
   font-family: rexlia;
   font-size: 27px;
+  color: var(--primary);
+}
+}
+
+
+@media (max-width: 350px){
+  .inicio{
+    margin-left: -20px;
+  }
+
+  .checkbtn{
+    display: block;
+    margin-top: 0px;
+    margin-right: -20px;
+  }
+
+  .sobremi p{
+    font-size: 10px;
+  }
+
+  .container2 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: -20px;
+    z-index: 100;
+    z-index: 4;
+    transform: rotate(0deg);
+    animation: rotateParent var(--animDuration) infinite linear forwards;
+}
+.container3 {
+  position: absolute;
+  width: 130px;
+  margin-left: -20px;
+  height: 130px;
+  border-radius: 50%;
+  z-index: 3;
+  z-index: 100;
+  transform: rotate(0deg);
+  animation: rotateParent var(--animDuration2) infinite linear forwards;
+}
+.container4 {
+  position: absolute;
+  width: 130px;
+  margin-left: -20px;
+  height: 130px;
+  border: 2px solid var(--pathColor);
+  border-radius: 50%;
+  z-index: 2;
+  transform: rotate(0deg);
+  animation: rotateParent var(--animDuration3) infinite linear forwards;
+}
+  .container5 img {
+    height: 105px;
+    width: 95px;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: rexlia;
+  font-size: 20px;
+  color: var(--primary);
+}
+[role="progressbar2"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: rexlia;
+  font-size: 20px;
+  color: var(--primary);
+}
+[role="progressbar3"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: rexlia;
+  font-size: 20px;
   color: var(--primary);
 }
 }

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e2e44;
+}
+
+
+.hide {
+  display: none;
+}
+.wrapper {
+  position: relative;
+  color: #fff;
+  background: #2d2f41;
+  width: 425px;
+  padding: 20px 45px;
+  box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper:before{
+  content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #23ff6d, #2f93f1, #ff5e9a);
+    background-size: 200% 200%;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(40px);
+    animation: glowing 10s ease infinite;
+}
+
+@keyframes glowing{
+  0%{
+      background-position: 0 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0 50%;
+  }
+}
+
+.timer-display {
+  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hour, .points, .minutes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 125px;
+}
+
+.hour,  .minutes{
+  font-size: 6.5em;
+  width: 125px;
+}
+
+.points{
+  font-size: 5em;
+  color: #929292;
+}
+
+.hour{
+  background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.minutes{
+  background: -webkit-linear-gradient(90deg, #3b00a9, #ac5fff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.right{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.period, .seconds{
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.period{
+  transform: translateY(-20px);
+  background: -webkit-linear-gradient(90deg, #a93300, #f7ff5f);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.seconds{
+  transform: translateY(16px);
+  background: -webkit-linear-gradient(90deg, #ff5fe2,#005da9);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.calendar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  background: -webkit-linear-gradient(90deg, #a100ec,#f9b4ed);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.name-days, .day-number, .year{
+  margin-left: 8px; 
+}
+
+#hourInput{
+  background: #313345;
+  border: solid 1.5px #0576d2;
+  border-radius: 10px;
+  color: #fff;
+  padding: 3px;
+  outline: none;
+}
+
+#minuteInput{
+  background: #313345;
+  border: solid 1.5px #0576d2;
+  border-radius: 10px;
+  color: #fff;
+  padding: 3px;
+  outline: none;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.inputs input {
+  width: 2.8em;
+  font-size: 1.3em;
+  border: 1px solid #000000;
+  border-radius: 0.3em;
+  padding: 0.4em 0.2em;
+}
+#set{
+  background-color: #313345;
+  border: solid 1.5px #0576d2;
+  padding: 2px 15px;
+  border-radius: 50%;
+  display: block;
+  align-items: center;
+  align-items: center;
+  color: #5fd4ff;
+  font-size: 30px;
+  margin: 5px auto 0 auto;
+}
+
+#set:hover{
+  box-shadow: inset 0 0 20px rgba(115, 253, 186, 0.5), 0 0 20px rgba(85, 176, 255, 0.4);
+  outline-color: rgba(26, 190, 255, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #a3a9d8;
+  cursor: pointer;
+}
+.alarm {
+  display: grid;
+  grid-template-columns: 8fr 2fr 2fr;
+  gap: 1em;
+  margin-top: 1.5em;
+  align-items: center;
+  border-bottom: 1px solid #898f9b;
+  padding-bottom: 0.6em;
+}
+.alarm input[type="checkbox"] {
+  appearance: none;
+  height: 2em;
+  width: 3.75em;
+  background-color: #e2e2ec;
+  border-radius: 1.25em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.alarm input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #757683;
+  height: 1.43em;
+  width: 1.43em;
+  border-radius: 50%;
+  top: 0.25em;
+  left: 0.25em;
+}
+.alarm input[type="checkbox"]:checked {
+  background-color: #d2e2ff;
+}
+.alarm input[type="checkbox"]:checked:before {
+  background-color: #377dff;
+  left: 2em;
+}
+.deleteButton {
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #377dff;
+  border: none;
+  cursor: pointer;
+}

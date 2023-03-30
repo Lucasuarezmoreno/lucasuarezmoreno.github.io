@@ -13,7 +13,7 @@ const typed = new Typed('.line', {
 });
 
 const typed2 = new Typed('.yo', {
-    strings: ['Developer.'],
+    strings: ['Front-end', 'Developer.'],
     typeSpeed:75,
     starDelay:300,
     backSpeed:75,
